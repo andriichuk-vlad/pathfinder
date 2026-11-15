@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Pathfinder</title>
+</head>
+<body class="bg-gray-100 text-gray-800 p-8">
+    <div class="max-w-4x1 mx-auto space-y-6">
+        <select id="userSelect" class="border border-gray-300 rounded px-3 py-2 mr-2"></select>
+        <div class="bg-white p-6 rounded-lg shadow space-y-4">
+            <h3>Search Rides</h3>
+            <input id="fromCity" placeholder="From City" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <input id="toCity" placeholder="To City" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <button id="searchRides" onclick="searchRides()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded cursor-pointer">Search</button>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow space-y-4">
+            <h3>Create New Ride</h3>
+            <input id="newFromCity" type="text" placeholder="From City" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <input id="newToCity" type="text" placeholder="To City" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <input id="newIntermediateCities" type="text" placeholder="Via Cities (comma separated)" class="border border-gray-300 rounded px-3 py-2 mr-2 flex flex-wrap gap-2 items-center w-64">
+            <input id="newDepartureTime" type="datetime-local" placeholder="Departure Time" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <input id="newSeats" type="number" placeholder="Total Seats" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <input id="newPrice" type="number" placeholder="Price" class="border border-gray-300 rounded px-3 py-2 mr-2">
+            <button onclick="createRide()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded cursor-pointer">Create Ride</button>
+        </div>
+        <button id="loadRides" onclick="loadRides()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded cursor-pointer">Show All</button>
+        <div id="ridesContainer"></div>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>

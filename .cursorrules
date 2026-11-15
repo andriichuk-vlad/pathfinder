@@ -1,0 +1,17 @@
+    Project Context
+It's a Full-Stack MVP service for carpooling called Pathfinder, developed using Java 21, Spring Boot 3, Spring Data JPA, H2 Database, and Lombok.
+
+    Architecture & Patterns
+Architecture layers: Controller, Service, Repository. For the MVP, controllers should work directly with JPA entities, avoiding DTOs and mappers (MapStruct) for speed.
+Use @Transactional in the service layer to manage transactions effectively.
+
+    Frontend Guidelines
+Client side located in src/main/resources/static/index.html. Use JavaScript (fetch API) for interaction with REST-controllers
+and styling with Tailwind CSS (CDN) without installing Node.js, React or other bundlers.
+
+    Code Style & Testing
+Generate clean code with proper naming conventions, comments, and Javadoc for public methods and using Lombok.
+Use JUnit 5 for unit testing and Mockito for mocking dependencies. Write integration tests for REST controllers using MockMvc.
+
+    Database & Data Management
+Use H2 in-memory database for development and testing.
